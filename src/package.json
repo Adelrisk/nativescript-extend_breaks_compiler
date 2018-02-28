@@ -1,5 +1,5 @@
 {
-    "name": "nativescript-extend_breaks_java_compiler",
+    "name": "@example/nativescript-extend_breaks_java_compiler",
     "version": "1.0.0",
     "description": "Your awesome NativeScript plugin.",
     "main": "extend_breaks_java_compiler",
@@ -17,12 +17,12 @@
         "test.android": "npm i && npm run tsc && npm run tslint && cd ../demo && tns build android && tns test android --justlaunch",
         "test.ios": "npm i && npm run tsc && npm run tslint && cd ../demo && tns build ios && tns test ios --justlaunch",
         "tslint": "cd .. && tslint \"**/*.ts\" --config tslint.json --exclude \"**/node_modules/**\"",
-        "plugin.link": "npm link && cd ../demo && npm link nativescript-extend_breaks_java_compiler && cd ../src",
+        "plugin.link": "npm link && cd ../demo && npm link @example/nativescript-extend_breaks_java_compiler && cd ../src",
         "plugin.tscwatch": "npm run tsc -- -w",
         "demo.ios": "npm i && npm run tsc && cd ../demo && tns run ios --syncAllFiles",
         "demo.android": "npm i && npm run tsc && cd ../demo && tns run android --syncAllFiles",
         "demo.reset": "cd ../demo && rimraf platforms",
-        "plugin.prepare": "npm run tsc && cd ../demo && tns plugin remove nativescript-extend_breaks_java_compiler && tns plugin add ../src",
+        "plugin.prepare": "npm run tsc && cd ../demo && tns plugin remove @example/nativescript-extend_breaks_java_compiler && tns plugin add ../src",
         "clean": "cd ../demo && rimraf hooks node_modules platforms && cd ../src && rimraf node_modules && npm run plugin.link",
         "ci.tslint": "npm i && tslint '**/*.ts' --config '../tslint.json' --exclude '**/node_modules/**'"
     },
@@ -50,6 +50,8 @@
         "rimraf": "^2.5.0",
         "tslint": "^5.0.0"
     },
-    "dependencies": {},
+    "dependencies": {
+        "nativescript-webview-interface": "^1.4.2"
+    },
     "bootstrapper": "nativescript-plugin-seed"
 }

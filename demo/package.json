@@ -9,9 +9,9 @@
     }
   },
   "dependencies": {
+    "@example/nativescript-extend_breaks_java_compiler": "file:../src",
     "nativescript-theme-core": "^1.0.4",
     "nativescript-unit-test-runner": "^0.3.4",
-    "nativescript-extend_breaks_java_compiler": "../src",
     "tns-core-modules": "^3.4.0"
   },
   "devDependencies": {
